@@ -1,0 +1,10 @@
+.menu-container {
+    width: 100%;
+}
+
+.cards-section {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
