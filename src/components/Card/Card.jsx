@@ -1,13 +1,11 @@
 import styles from './Card.module.css'
 
-function Card() {
-
-const styleClass = "red-bg"
+function Card(props) {
 
     return (
         <div className={styles["card"]}>
-         <div className={styles["top--card"]}></div>
-         <div className={`${styles["title--card"]} ${styles[`${styleClass}`]}`}>Something</div>
+         <div className={styles["top--card"]} style={{backgroundImage: "url(" + props.image + ")"}}></div>
+         <div style={props.style} className={`${styles["title--card"]}`}>{props.title}</div>
         </div>
     )
 }

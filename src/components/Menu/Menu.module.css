@@ -6,5 +6,6 @@
     margin-top: 50px;
     width: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 20px;
 }

@@ -1,6 +1,6 @@
 .card {
-    height: 200px;
-    width: 150px;
+    height: 300px;
+    width: 250px;
     background-color: lightgoldenrodyellow;
     border-radius: 9px;
     overflow: hidden;
@@ -9,7 +9,9 @@
 .top--card {
     height: 80%;
     width: 100%;
-    background-color: blue;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .title--card {
@@ -20,9 +22,4 @@
     justify-content: center;
     align-items: center;
 
-}
-
-.red-bg {
-    background-color: red;
-    
 }
