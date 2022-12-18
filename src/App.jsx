@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Menu from './components/Menu/Menu'
-import './App.css'
+import MeditationSection from './components/MeditationSection/MeditationSection'
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
         <Menu />
-      
+        {/* <MeditationSection /> */}
     </div>
   )
 }

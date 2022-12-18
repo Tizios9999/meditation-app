@@ -4,8 +4,8 @@ function Settings() {
     
     return (
       <div className={styles["settings-container"]}>
-        <div className="timer-checkbox--container">
-          <span className="timer-checkbox">
+        <div className={styles["timer-checkbox--container"]}>
+          <span className={styles["timer-checkbox"]}>
           <input
             type="checkbox"
             id="timer-toggle"
@@ -20,7 +20,7 @@ function Settings() {
         </div>
         
         
-        <div className="timer--settings">
+        <div className={styles["timer--settings"]}>
 
         <label htmlFor="input-minutes">
             Minutes: 
@@ -28,7 +28,8 @@ function Settings() {
         
         <input 
             id="input-minutes"
-            name="input-minutes" />
+            name="input-minutes" 
+            className={styles["input-minutes"]}/>
 
         <label htmlFor="input-countdown">
             Countdown seconds: 
@@ -36,7 +37,8 @@ function Settings() {
         
         <input 
             id="input-countdown"
-            name="input-countdown" />
+            name="input-countdown" 
+            className={styles["input-countdown"]}/>
 
         </div>
       </div>

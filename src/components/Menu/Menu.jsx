@@ -3,6 +3,7 @@ import Settings from '../Settings/Settings'
 import Card from '../Card/Card'
 import styles from './Menu.module.css'
 import cardData from '../../data/cards'
+import ConfirmSettings from '../ConfirmSettings/ConfirmSettings'
 
 function Menu() {
 
@@ -22,6 +23,8 @@ const cardElements =  cardData.map((card) => {
 
      {/* // Logo */}
 
+    <h1>Meditation App</h1>
+
      {/* // Volume component */}
      <Volume />
 
@@ -35,7 +38,7 @@ const cardElements =  cardData.map((card) => {
      </section>
 
      {/* // Bottom section with start button */}
-
+     <ConfirmSettings />
     </div>
   )
 }

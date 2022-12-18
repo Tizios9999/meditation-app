@@ -1,11 +1,14 @@
 .menu-container {
-    width: 100%;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(100, 100, 100, 0.5);
 }
 
 .cards-section {
     margin-top: 50px;
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
 }
