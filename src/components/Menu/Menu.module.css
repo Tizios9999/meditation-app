@@ -1,7 +1,15 @@
 .menu-container {
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
+    height: 100%;
+    padding-top: 20px;
+    padding-bottom: 120px;
     background-color: rgba(100, 100, 100, 0.5);
+}
+
+.app-title {
+    font-weight: normal;
+    color: white;
 }
 
 .cards-section {

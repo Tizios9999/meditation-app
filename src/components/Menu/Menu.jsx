@@ -23,7 +23,7 @@ const cardElements =  cardData.map((card) => {
 
      {/* // Logo */}
 
-    <h1>Meditation App</h1>
+    <h1 className={styles["app-title"]}>Meditation App</h1>
 
      {/* // Volume component */}
      <Volume />

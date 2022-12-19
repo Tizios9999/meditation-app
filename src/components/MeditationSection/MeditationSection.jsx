@@ -5,7 +5,7 @@ import Timer from '../Timer/Timer'
 export default function MeditationSection() {
     return (
         <div className={styles["meditation-section"]}>
-            <button>Menu</button>
+            <button className={styles["menu-button"]}>Settings</button>
             <Timer />
             <Volume />
         </div>
