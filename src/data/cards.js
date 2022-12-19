@@ -2,7 +2,7 @@ export default [
         {
         id: 0,
         imageUrl: './img/standard.png',
-        title: 'Magic',
+        title: 'Mystic experience',
         theme: {
             backgroundColor: "rgba(240, 110, 110, 0.6)"
         }

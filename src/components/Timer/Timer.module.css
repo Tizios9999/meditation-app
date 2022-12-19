@@ -1,0 +1,85 @@
+.timer-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    padding: 20px;
+}
+
+.timer-element {
+    background-color: rgba(175, 175, 175, 0.3); 
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (max-width: 800px) {
+
+    .timer-element {
+        width: 70vw;
+        height: 70vw;
+    }
+
+    .timer-counter {
+        font-size: 12vw;
+        font-weight: bold;
+    }
+}
+
+@media only screen and (min-width: 801px) and (max-width: 1000px) {
+
+    .timer-element {
+        width: 50vw;
+        height: 50vw;
+    }
+
+    .timer-counter {
+        font-size: 8vw;
+        font-weight: bold;
+    }
+}
+
+@media only screen and (min-width: 1001px) {
+
+    .timer-element {
+        width: 35vw;
+        height: 35vw;
+    }
+
+    .timer-counter {
+        font-size: 6vw;
+        font-weight: bold;
+    }
+}
+
+.timer-box {
+    width: 70%;
+    height: 70%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-end;
+}
+
+.timer-buttons-wrapper {
+    height: 33%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 15px;
+
+}
+
+.timer-counter-wrapper {
+    height: 33%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.timer-counter {
+    
+    font-weight: bold;
+}
