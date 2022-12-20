@@ -5,3 +5,12 @@
 .volume-slider {
     margin: 0 5px;
 }
+
+.volume-container svg {
+    padding: 2px;
+}
+
+.volume-container svg:hover {
+    border-radius: 50%;
+    background-color: rgba(100, 100, 100, 0.5);
+}
