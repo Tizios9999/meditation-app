@@ -7,7 +7,7 @@ export function AppProvider(props) {
     const [appState, setAppState] = useState(
         {
             activeTimer: true,
-            timerPlaying: false,
+            timerStatus: "stop",
             meditationMode: false
         }
     )

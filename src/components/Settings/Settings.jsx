@@ -1,7 +1,21 @@
 import styles from './Settings.module.css'
+import { AppContext } from '../../contexts/AppContext'
+import { useContext } from 'react'
+
 
 function Settings() {
     
+  const [appState, setAppState] = useContext(AppContext);
+
+  function handleChange() {
+    setAppState(prevState => {
+      return {
+        ...prevState,
+        activeTimer: !prevState.activeTimer
+      };
+    })
+  }
+
     return (
       <div className={styles["settings-container"]}>
         <div className={styles["timer-checkbox--container"]}>
@@ -10,7 +24,8 @@ function Settings() {
             type="checkbox"
             id="timer-toggle"
             name="timer-toggle"
-            checked={true}
+            checked={appState.activeTimer}
+            onChange={handleChange}
             />
           </span>
 
@@ -20,7 +35,7 @@ function Settings() {
         </div>
         
         
-        <div className={styles["timer--settings"]}>
+        {appState.activeTimer && <div className={styles["timer--settings"]}>
 
         <label htmlFor="input-minutes">
             Minutes: 
@@ -41,6 +56,7 @@ function Settings() {
             className={styles["input-countdown"]}/>
 
         </div>
+        }
       </div>
       )
 }

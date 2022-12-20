@@ -21,7 +21,7 @@ export default function MeditationSection() {
     return (
         <div className={styles["meditation-section"]}>
             <button className={styles["menu-button"]} onClick={handleClick}>Settings</button>
-            <Timer />
+            {appState.activeTimer ? <Timer /> : <div />}
             <Volume />
         </div>
             )
