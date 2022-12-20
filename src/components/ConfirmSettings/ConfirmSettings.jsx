@@ -1,9 +1,23 @@
+import { useContext } from 'react';
 import styles from './ConfirmSettings.module.css'
+import { AppContext } from '../../contexts/AppContext'
 
 export default function ConfirmSettings () {
+  
+  const [appState, setAppState] = useContext(AppContext);
+ 
+  function startMeditation() {
+    setAppState(prevState => {
+      return {
+        ...prevState,
+        meditationMode: !prevState.meditationMode
+      };
+    })
+  }
+
   return (
     <div className={styles["confirm-settings-wrapper"]}>
-      <button className={styles["confirm-button"]}>Start meditation</button>
+      <button className={styles["confirm-button"]} onClick={startMeditation}>Start meditation</button>
     </div>
   )
 }

@@ -1,15 +1,16 @@
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import Menu from './components/Menu/Menu'
 import MeditationSection from './components/MeditationSection/MeditationSection'
+import { AppContext } from './contexts/AppContext'
 
 function App() {
-  // const [count, setCount] = useState(0)
+  const [appState, setAppState] = useContext(AppContext);
 
   return (
-    <div className="App">
-        <Menu />
-        {/* <MeditationSection /> */}
-    </div>
+      <div className="App">
+          {appState.meditationMode ? <MeditationSection /> : <Menu /> }
+          
+      </div>
   )
 }
 
