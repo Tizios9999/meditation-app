@@ -11,7 +11,7 @@ export function AppProvider(props) {
             timerSeconds: 60,
             timerCountdown: 0,
             meditationMode: false,
-            volume: 70,
+            volume: 50,
         }
     )
 

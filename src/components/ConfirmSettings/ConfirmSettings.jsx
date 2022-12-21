@@ -5,8 +5,11 @@ import { AppContext } from '../../contexts/AppContext'
 export default function ConfirmSettings() {
   
   const [appState, setAppState] = useContext(AppContext);
- 
+
   function handleClick() {
+
+    if (isNaN(Number(appState.timerSeconds))) return;
+
     setAppState(prevState => {
         return {
           ...prevState,

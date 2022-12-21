@@ -4,10 +4,15 @@ import PauseButton from './buttons/PauseButton'
 import StopButton from './buttons/StopButton'
 import { AppContext } from '../../contexts/AppContext'
 import { useContext } from 'react'
+import zeroFill from '../../assets/js/zeroFill'
 
 export default function Timer() {
 
   const [appState, setAppState] = useContext(AppContext)
+
+  let timerMinutes = zeroFill(Math.floor(appState.timerSeconds / 60), 2);
+  let timerSeconds = zeroFill(appState.timerSeconds % 60, 2);
+  
 
   function handleClick(status) {
     console.log(status)
@@ -29,7 +34,7 @@ export default function Timer() {
                     {appState.timerStatus !== "stop" && <StopButton onClick={() => handleClick("stop")}/>}
                   </div>
                     <div className={styles["timer-counter-wrapper"]}>
-                      <div className={styles["timer-counter"]}>{`00:00`}</div>
+                      <div className={styles["timer-counter"]}>{`${timerMinutes}:${timerSeconds}`}</div>
                     </div>
                 </div>
             </div>
