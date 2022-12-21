@@ -4,7 +4,7 @@ import PauseButton from './buttons/PauseButton'
 import StopButton from './buttons/StopButton'
 import { AppContext } from '../../contexts/AppContext'
 import { useContext } from 'react'
-import TimerCounter from './TimerCounter'
+import TimerCounter from './counter/TimerCounter'
 
 export default function Timer() {
 
