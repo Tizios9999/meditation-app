@@ -8,8 +8,10 @@ export function AppProvider(props) {
         {
             activeTimer: true,
             timerStatus: "stop",
+            timerSeconds: 60,
+            timerCountdown: 0,
             meditationMode: false,
-            volume: 70
+            volume: 70,
         }
     )
 

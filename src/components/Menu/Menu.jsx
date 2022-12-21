@@ -7,6 +7,15 @@ import ConfirmSettings from '../ConfirmSettings/ConfirmSettings'
 
 function Menu() {
 
+  function handleChange() {
+    setAppState(prevState => {
+      return {
+        ...prevState,
+        activeTimer: !prevState.activeTimer
+      };
+    })
+  }
+
 const cardElements =  cardData.map((card) => {
   return (
     <Card 
@@ -27,7 +36,6 @@ const cardElements =  cardData.map((card) => {
 
      {/* // Volume component */}
      <Volume />
-
 
      {/* // Settings */}
      <Settings />
