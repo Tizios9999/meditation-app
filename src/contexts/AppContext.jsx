@@ -10,6 +10,7 @@ export function AppProvider(props) {
             timerStatus: "stop",
             timerSeconds: 60,
             timerCountdown: 0,
+            elapsedSeconds: 0,
             meditationMode: false,
             volume: 50,
         }

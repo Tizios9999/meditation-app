@@ -10,8 +10,8 @@ export default function Timer() {
 
   const [appState, setAppState] = useContext(AppContext)
 
-  let timerMinutes = zeroFill(Math.floor(appState.timerSeconds / 60), 2);
-  let timerSeconds = zeroFill(appState.timerSeconds % 60, 2);
+  let timerMinutes = zeroFill(Math.floor((appState.timerSeconds - appState.elapsedSeconds) / 60), 2);
+  let timerSeconds = zeroFill((appState.timerSeconds - appState.elapsedSeconds) % 60, 2);
   
 
   function handleClick(status) {
