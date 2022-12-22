@@ -16,11 +16,12 @@ export default function ConfirmSettings() {
           meditationMode: !prevState.meditationMode
         };
       })
+
 }
 
   return (
     <div className={styles["confirm-settings-wrapper"]}>
-      <button className={styles["confirm-button"]} onClick={handleClick}>Start meditation</button>
+      <button style={{backgroundColor: appState.themeAppBg, color: "white"}} onClick={handleClick}>Start meditation</button>
     </div>
   )
 }

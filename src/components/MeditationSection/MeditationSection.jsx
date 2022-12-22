@@ -12,7 +12,9 @@ export default function MeditationSection() {
         setAppState(prevState => {
             return {
               ...prevState,
-              meditationMode: !prevState.meditationMode
+              meditationMode: !prevState.meditationMode,
+              timerStatus: "stop",
+              elapsedSeconds: 0
             };
           })
     }

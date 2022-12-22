@@ -16,8 +16,9 @@ function TimerCounter() {
 
     // Check if the elapsed time has reached the timer set by the user so the countdown will stop.
     if (appState.timerSeconds - appState.elapsedSeconds == 0) {
+      
       // Stop the timer and reset the time elapsed
-      setAppState((prevState) => ({ ...prevState, timerStatus: "stop", elapsedSeconds: 0 }));
+      setAppState((prevState) => ({ ...prevState, timerStatus: "stop", elapsedSeconds: 0 }));;
 
       // Put here the "ding" sound as a reminder that the timer has stopped.
 

@@ -4,33 +4,34 @@ import Card from '../Card/Card'
 import styles from './Menu.module.css'
 import cardData from '../../data/cards'
 import ConfirmSettings from '../ConfirmSettings/ConfirmSettings'
+import { useContext } from 'react'
+import { AppContext } from '../../contexts/AppContext'
 
 function Menu() {
 
-  function handleChange() {
-    setAppState(prevState => {
-      return {
-        ...prevState,
-        activeTimer: !prevState.activeTimer
-      };
-    })
-  }
+  const [appState, setAppState] = useContext(AppContext);
 
-const cardElements =  cardData.map((card) => {
-  return (
-    <Card 
-      key={card.id} 
-      style={card.theme} 
-      title={card.title}
-      image={card.imageUrl} />
-    )
+  
+
+  const cardElements = cardData.map((card) => {
+    
+    const props = {
+      key: card.id,
+      id: card.id,
+      style: card.style,
+      title: card.title,
+      image: card.imageUrl,
+      theme: card.theme
     }
-  )
+    
+    return (
+      <Card {...props} />
+      )
+      }
+    )
 
   return (
-    <div className={styles["menu-container"]}>
-
-     {/* // Logo */}
+    <div className={styles["menu-container"]} style={{backgroundColor: appState.themeMenuBg }}>
 
     <h1 className={styles["app-title"]}>Meditation App</h1>
 

@@ -13,6 +13,9 @@ export function AppProvider(props) {
             timerCountdown: 0,
             meditationMode: false,
             volume: 50,
+            selectedCard: null,
+            themeAppBg: "navy",
+            themeMenuBg: "rgba(150, 150, 150, 0.5)"
         }
     )
 

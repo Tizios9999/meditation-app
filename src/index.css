@@ -16,9 +16,9 @@ body {
   margin: 0;
   display: flex;
   min-height: 100vh;
-  background: linear-gradient(-45deg, #ee7752, #c7b0fa, #23a6d5, #23d5ab);
-  background-size: 400% 400%;
+  /* background: linear-gradient(-45deg, #ee7752, #c7b0fa, #23a6d5, #23d5ab); */
   animation: gradient 15s ease infinite;
+  /* background-size: 400% 400%; */
 }
 
 h1 {
@@ -46,7 +46,7 @@ button:focus-visible {
 
 /* Animations */
 
-@keyframes gradient {
+/* @keyframes gradient {
   0% {
       background-position: 0% 50%;
   }
@@ -56,4 +56,5 @@ button:focus-visible {
   100% {
       background-position: 0% 50%;
   }
-}
+
+} */

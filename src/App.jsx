@@ -7,7 +7,7 @@ function App() {
   const [appState, setAppState] = useContext(AppContext);
 
   return (
-      <div className="App">
+      <div className="App" style={{background: appState.themeAppBg}}>
           {appState.meditationMode ? <MeditationSection /> : <Menu /> }
           
       </div>
