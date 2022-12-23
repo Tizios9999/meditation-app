@@ -31,7 +31,6 @@ export default function Timer() {
                     {appState.timerStatus !== "stop" && <StopButton onClick={() => handleClick("stop")}/>}
                   </div>
                     <TimerCounter />
-                    {/*  */}
                 </div>
             </div>
         </div>
