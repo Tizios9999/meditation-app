@@ -12,5 +12,5 @@
 
 .volume-container svg:hover {
     border-radius: 50%;
-    background-color: rgba(100, 100, 100, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
 }

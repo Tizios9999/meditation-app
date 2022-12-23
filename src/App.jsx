@@ -10,7 +10,6 @@ function App() {
     <section>
       
       <div className="App">
-          
           {appState.meditationMode ? <MeditationSection /> : <Menu /> }
           
       </div>

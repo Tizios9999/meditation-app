@@ -4,7 +4,8 @@ import Card from '../Card/Card'
 import styles from './Menu.module.css'
 import cardData from '../../data/cards'
 import ConfirmSettings from '../ConfirmSettings/ConfirmSettings'
-import { useContext } from 'react'
+import BgVideo from '../BgVideo/BgVideo'
+import { useContext, useEffect } from 'react'
 import { AppContext } from '../../contexts/AppContext'
 
 function Menu() {
@@ -32,8 +33,10 @@ function Menu() {
 
   return (
     <div className={styles["menu-container"]} style={{backgroundColor: appState.themeMenuBg }}>
-    <video src={appState.bgVideoSrc} autoPlay loop muted />
-    <h1 className={styles["app-title"]}>Meditation App</h1>
+    
+     <BgVideo />
+    
+     <h1 className={styles["app-title"]}>Meditation App</h1>
 
      {/* // Volume component */}
      <Volume />
@@ -45,7 +48,7 @@ function Menu() {
      <section className={styles["cards-section"]}>
      {cardElements}
      </section>
-
+  
      {/* // Bottom section with start button */}
      <ConfirmSettings />
     </div>

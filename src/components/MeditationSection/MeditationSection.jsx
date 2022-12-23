@@ -2,6 +2,7 @@ import { useContext } from 'react'
 import styles from './MeditationSection.module.css'
 import Volume from '../Volume/Volume'
 import Timer from '../Timer/Timer'
+import BgVideo from '../BgVideo/BgVideo'
 import { AppContext } from '../../contexts/AppContext'
 
 export default function MeditationSection() {
@@ -22,7 +23,7 @@ export default function MeditationSection() {
 
     return (
         <div className={styles["meditation-section"]}>
-            <video src={appState.bgVideoSrc} autoPlay loop muted />
+            <BgVideo />
             <button className={styles["menu-button"]} onClick={handleClick}>Settings</button>
             {appState.activeTimer ? <Timer /> : <div />}
             <Volume />
