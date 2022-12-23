@@ -22,6 +22,7 @@ export default function MeditationSection() {
 
     return (
         <div className={styles["meditation-section"]}>
+            <video src={appState.bgVideoSrc} autoPlay loop muted />
             <button className={styles["menu-button"]} onClick={handleClick}>Settings</button>
             {appState.activeTimer ? <Timer /> : <div />}
             <Volume />

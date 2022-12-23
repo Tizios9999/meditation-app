@@ -15,7 +15,8 @@ export function AppProvider(props) {
             volume: 50,
             selectedCard: null,
             themeAppBg: "navy",
-            themeMenuBg: "rgba(150, 150, 150, 0.5)"
+            themeMenuBg: "rgba(150, 150, 150, 0.5)",
+            bgVideoSrc:  './video/Fireplace.mp4'
         }
     )
 

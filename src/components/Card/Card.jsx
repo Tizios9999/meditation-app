@@ -14,7 +14,8 @@ function Card(props) {
               ...prevState,
               selectedCard: props.id,
               themeAppBg: props.theme.backgroundColor,
-              themeMenuBg: props.theme.color
+              themeMenuBg: props.theme.color,
+              bgVideoSrc: props.theme.bgVideoSrc
             }
           )
         })

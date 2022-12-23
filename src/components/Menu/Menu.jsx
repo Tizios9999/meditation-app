@@ -32,7 +32,7 @@ function Menu() {
 
   return (
     <div className={styles["menu-container"]} style={{backgroundColor: appState.themeMenuBg }}>
-
+    <video src={appState.bgVideoSrc} autoPlay loop muted />
     <h1 className={styles["app-title"]}>Meditation App</h1>
 
      {/* // Volume component */}

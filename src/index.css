@@ -44,6 +44,17 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+video {
+  width: 100vw;
+  min-height: 100vh;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
 /* Animations */
 
 /* @keyframes gradient {
