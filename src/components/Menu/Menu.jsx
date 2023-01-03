@@ -4,11 +4,10 @@ import Card from '../Card/Card'
 import styles from './Menu.module.css'
 import cardData from '../../data/cards'
 import ConfirmSettings from '../ConfirmSettings/ConfirmSettings'
-import BgVideo from '../BgVideo/BgVideo'
 import { useContext, useEffect } from 'react'
 import { AppContext } from '../../contexts/AppContext'
 
-function Menu() {
+function Menu(props) {
 
   const [appState, setAppState] = useContext(AppContext);
 
@@ -16,26 +15,25 @@ function Menu() {
 
   const cardElements = cardData.map((card) => {
     
-    const props = {
+    const cardProps = {
       key: card.id,
       id: card.id,
       style: card.style,
       title: card.title,
       image: card.imageUrl,
-      theme: card.theme
+      theme: card.theme,
+      playback: props.func
     }
     
     return (
-      <Card {...props} />
+      <Card {...cardProps} />
       )
       }
     )
 
   return (
     <div className={styles["menu-container"]} style={{backgroundColor: appState.themeMenuBg }}>
-    
-     <BgVideo />
-    
+
      <h1 className={styles["app-title"]}>Meditation App</h1>
 
      {/* // Volume component */}

@@ -9,7 +9,8 @@ export default [
         theme: {
             backgroundColor: "rgba(200, 110, 110, 1)",
             color: "rgba(60, 30, 30, 0.5)",
-            bgVideoSrc: null
+            bgVideoSrc: null,
+            bgMusicSrc: './audio/ambience.mp3'
         }
 
         },
@@ -23,7 +24,8 @@ export default [
             theme: {
             backgroundColor: "rgba(180, 60, 0, 1)",
             color: "rgba(60, 30, 0, 0.7)",
-            bgVideoSrc: './video/Fireplace.mp4'
+            bgVideoSrc: './video/Fireplace.mp4',
+            bgMusicSrc: './audio/fireplace.mp3'
         }
             
         },
@@ -37,7 +39,8 @@ export default [
             theme: {
             backgroundColor: "rgba(0, 80, 0, 1)",
             color: "rgba(0, 40, 0, 0.7)",
-            bgVideoSrc: './video/Rainforest.mp4'
+            bgVideoSrc: './video/Rainforest.mp4',
+            bgMusicSrc: './audio/rainforest.mp3'
         }
         },
         {
@@ -50,7 +53,8 @@ export default [
             theme: {
             backgroundColor: "rgba(105, 176, 220, 1)",
             color: "rgba(20, 30, 120, 0.7)",
-            bgVideoSrc: './video/Sea.mp4'
+            bgVideoSrc: './video/Sea.mp4',
+            bgMusicSrc: './audio/oceanwaves.mp3'
         }
         }
 

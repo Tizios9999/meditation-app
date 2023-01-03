@@ -1,12 +1,15 @@
 import styles from './Card.module.css'
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import { AppContext } from '../../contexts/AppContext'
+import playSound from '../../assets/js/playSound';
 
 function Card(props) {
 
-    const [appState, setAppState] = useContext(AppContext);
+    const [appState, setAppState, changeTrack] = useContext(AppContext);
 
     function handleClick() {
+
+    console.log(props.theme.bgMusicSrc);
 
         setAppState(prevState => {
           return (
@@ -15,11 +18,17 @@ function Card(props) {
               selectedCard: props.id,
               themeAppBg: props.theme.backgroundColor,
               themeMenuBg: props.theme.color,
-              bgVideoSrc: props.theme.bgVideoSrc
+              bgVideoSrc: props.theme.bgVideoSrc,
             }
           )
         })
+
+        props.playback(props.theme.bgMusicSrc);
+
       }
+
+      // changeTrack(appState.audioRef, props.theme.bgAudioSrc);
+
 
     return (
         <div className={`${styles["card"]} ${props.id == appState.selectedCard ? styles["highlighted"] : ""}`} onClick={handleClick}>
