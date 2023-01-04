@@ -21,18 +21,30 @@ function App() {
     audioRef.current.volume = appState.volume / 100
   }
 
+  function toggleBg() {
+    if (appState.bgVideoSrc === null && appState.selectedCard !== null) {
+      document.body.classList.add("background-effect");
+    } else {
+      document.body.classList.remove("background-effect");
+    }
+  }
+
+  useEffect(() => {
+    toggleBg()
+  }, [appState.selectedCard])
+
   useEffect(() => {
     changeVolume()
   }, [appState.volume])
 
+
+
   return (
     <section>
-      
       <div className="App">
           {appState.bgVideoSrc && <BgVideo />}
           <BgAudio ref={audioRef} />
           {appState.meditationMode ? <MeditationSection /> : <Menu playback={playback} /> }
-          
       </div>
       </section>
   )

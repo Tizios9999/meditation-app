@@ -15,10 +15,7 @@
 body {
   margin: 0;
   display: flex;
-  min-height: 100vh;
-  /* background: linear-gradient(-45deg, #ee7752, #c7b0fa, #23a6d5, #23d5ab); */
-  animation: gradient 15s ease infinite;
-  /* background-size: 400% 400%; */
+  background-color: navy;
 }
 
 h1 {
@@ -55,17 +52,35 @@ video {
   z-index: -1;
 }
 
+.background-effect {
+  width: 100vw;
+  height: 100%;
+  min-height: 100vh;
+  z-index: -2;
+  animation: gradient 25s linear infinite;
+  animation-direction: alternate;
+}
+
 /* Animations */
 
-/* @keyframes gradient {
+@keyframes gradient {
   0% {
-      background-position: 0% 50%;
-  }
-  50% {
-      background-position: 100% 50%;
-  }
-  100% {
-      background-position: 0% 50%;
+      background-color: navy;
   }
 
-} */
+  25% {
+      background-color: green;
+  }
+
+  50% {
+      background-color: plum;
+  }
+
+  75% {
+      background-color: purple;
+  }
+
+  100% {
+      background-color: orange;
+  }
+}
