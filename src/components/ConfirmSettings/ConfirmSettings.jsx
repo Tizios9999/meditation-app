@@ -10,6 +10,8 @@ export default function ConfirmSettings() {
 
     if (isNaN(Number(appState.timerSeconds))) return;
 
+    if (appState.selectedCard === null) return;
+
     setAppState(prevState => {
         return {
           ...prevState,
