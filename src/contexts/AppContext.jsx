@@ -20,22 +20,8 @@ export function AppProvider(props) {
         }
     )
 
-    const changeTrack = (ref, src) => {
-        
-        if (ref.current.isPlaying) {
-            ref.current.pause();
-            ref.current.isPlaying = false;
-        }
-        ref.current.src = src.toString();
-        ref.current.play();
-        ref.current.isPlaying = true;
-        ref.current.volume = appState.volume / 100;
-        console.log(ref);
-        console.log("click!");
-      }
-
     return (
-        <AppContext.Provider value={[appState, setAppState, changeTrack]}>
+        <AppContext.Provider value={[appState, setAppState]}>
             {props.children}
         </AppContext.Provider>
     )

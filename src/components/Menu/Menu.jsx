@@ -22,7 +22,7 @@ function Menu(props) {
       title: card.title,
       image: card.imageUrl,
       theme: card.theme,
-      playback: props.func
+      playback: props.playback
     }
     
     return (

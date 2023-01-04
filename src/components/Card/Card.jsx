@@ -1,11 +1,10 @@
 import styles from './Card.module.css'
-import { useContext, useEffect } from 'react'
+import { useContext } from 'react'
 import { AppContext } from '../../contexts/AppContext'
-import playSound from '../../assets/js/playSound';
 
 function Card(props) {
 
-    const [appState, setAppState, changeTrack] = useContext(AppContext);
+    const [appState, setAppState] = useContext(AppContext);
 
     function handleClick() {
 
@@ -26,8 +25,6 @@ function Card(props) {
         props.playback(props.theme.bgMusicSrc);
 
       }
-
-      // changeTrack(appState.audioRef, props.theme.bgAudioSrc);
 
 
     return (
