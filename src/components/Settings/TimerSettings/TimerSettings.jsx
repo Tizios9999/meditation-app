@@ -35,17 +35,6 @@ export default function TimerSettings() {
         
       </div>
 
-      <div>
-        <label htmlFor="input-countdown">
-            Countdown seconds: 
-        </label>
-        
-        <input 
-            id="input-countdown"
-            name="input-countdown"
-            className={styles["input-countdown"]}/>
-      </div>
-
         </div>
 
         )
