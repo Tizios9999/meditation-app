@@ -8,9 +8,13 @@ export default function ConfirmSettings() {
 
   function handleClick() {
 
-    if (isNaN(Number(appState.timerSeconds))) return;
+    if (appState.activeTimer) {
 
-    if (appState.selectedCard === null) return;
+      if (isNaN(Number(appState.timerSeconds)) || appState.timerSeconds == 0) return;
+
+      if (appState.selectedCard === null) return;
+
+    }
 
     setAppState(prevState => {
         return {
@@ -18,7 +22,7 @@ export default function ConfirmSettings() {
           meditationMode: !prevState.meditationMode
         };
       })
-
+    
 }
 
   return (

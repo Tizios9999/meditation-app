@@ -4,14 +4,14 @@ import Card from '../Card/Card'
 import styles from './Menu.module.css'
 import cardData from '../../data/cards'
 import ConfirmSettings from '../ConfirmSettings/ConfirmSettings'
-import { useContext, useEffect } from 'react'
+import { useContext, useRef } from 'react'
 import { AppContext } from '../../contexts/AppContext'
 
 function Menu(props) {
 
   const [appState, setAppState] = useContext(AppContext);
 
-  
+  const errorBoxRef = useRef(null);
 
   const cardElements = cardData.map((card) => {
     
@@ -42,6 +42,10 @@ function Menu(props) {
      {/* // Settings */}
      <Settings />
 
+    {/* Error Box */}
+     <div className={styles["error-box"]} ref={errorBoxRef}>
+           Any error will be shown here in this div
+     </div>
      {/* // Cards section */}
      <section className={styles["cards-section"]}>
      {cardElements}

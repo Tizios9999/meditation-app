@@ -20,3 +20,13 @@
     justify-content: center;
     gap: 20px;
 }
+
+.error-box {
+    color: red;
+    font-size: 1.2em;
+    background-color: rgba(59, 2, 2, 0.6);
+    width: 50%;
+    padding: 20px;
+    margin-top: 5px;
+    margin: 0 auto;
+}
