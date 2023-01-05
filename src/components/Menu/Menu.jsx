@@ -7,6 +7,7 @@ import ConfirmSettings from '../ConfirmSettings/ConfirmSettings'
 import { useContext, useRef, useEffect } from 'react'
 import { AppContext } from '../../contexts/AppContext'
 import ErrBox from '../ErrBox/ErrBox'
+import SetTimerButton from '../Settings/TimerSettings/SetTimerButton/SetTimerButton'
 
 function Menu(props) {
 
@@ -48,12 +49,13 @@ function Menu(props) {
      {/* // Volume component */}
      <Volume />
 
+    {/* Error Box */}
+    {appState.triggeredError && <ErrBox />}
+
      {/* // Settings */}
      <Settings />
 
-     {/* Error Box */}
-     {appState.triggeredError && <ErrBox />}
-
+     
      {/* // Cards section */}
      <section className={styles["cards-section"]}>
      {cardElements}

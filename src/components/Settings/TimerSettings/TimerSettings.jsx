@@ -1,6 +1,7 @@
 import styles from '../Settings.module.css'
 import { AppContext } from '../../../contexts/AppContext'
 import { useContext } from 'react'
+import SetTimerButton from './SetTimerButton/SetTimerButton'
 
 export default function TimerSettings() {
 
@@ -54,6 +55,13 @@ export default function TimerSettings() {
             className={styles["input-minutes"]}/>
 
       </div>
+
+      <div className={styles["timer-buttons-wrapper"]}>
+       <SetTimerButton value={1} />
+       <SetTimerButton value={3} />
+       <SetTimerButton value={5} />
+       <SetTimerButton value={10} />
+     </div>
       
      </div>
 

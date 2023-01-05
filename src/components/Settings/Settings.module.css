@@ -37,3 +37,8 @@
     text-align: center;
 }
 
+.timer-buttons-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
