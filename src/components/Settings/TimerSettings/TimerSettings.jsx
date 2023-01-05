@@ -48,7 +48,7 @@ export default function TimerSettings() {
             min="1"
             max="999"
             size="3"
-            maxlength="3"
+            maxLength="3"
             value={appState.timerSeconds/60}
             onChange={handleChange}
             className={styles["input-minutes"]}/>

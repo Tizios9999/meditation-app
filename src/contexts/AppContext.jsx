@@ -17,6 +17,8 @@ export function AppProvider(props) {
             themeAppBg: "navy",
             themeMenuBg: "rgba(0, 0, 0, 0.5)",
             bgVideoSrc:  null,
+            triggeredError: false,
+            errorMsg: "Any error will be shown here in this div",
         }
     )
 
