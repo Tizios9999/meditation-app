@@ -12,8 +12,6 @@ function Menu(props) {
 
   const [appState, setAppState] = useContext(AppContext);
 
-  const errorBoxRef = useRef(true);
-
   const cardElements = cardData.map((card) => {
     
     const cardProps = {
@@ -54,7 +52,7 @@ function Menu(props) {
      <Settings />
 
      {/* Error Box */}
-     {appState.triggeredError && <ErrBox ref={errorBoxRef} />}
+     {appState.triggeredError && <ErrBox />}
 
      {/* // Cards section */}
      <section className={styles["cards-section"]}>
