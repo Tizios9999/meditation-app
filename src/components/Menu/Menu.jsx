@@ -4,13 +4,15 @@ import Card from '../Card/Card'
 import styles from './Menu.module.css'
 import cardData from '../../data/cards'
 import ConfirmSettings from '../ConfirmSettings/ConfirmSettings'
-import { useContext } from 'react'
+import { useContext, useRef, useEffect } from 'react'
 import { AppContext } from '../../contexts/AppContext'
 import ErrBox from '../ErrBox/ErrBox'
 
 function Menu(props) {
 
   const [appState, setAppState] = useContext(AppContext);
+
+  const errorBoxRef = useRef(true);
 
   const cardElements = cardData.map((card) => {
     
@@ -24,11 +26,21 @@ function Menu(props) {
       playback: props.playback
     }
     
+    
     return (
       <Card {...cardProps} />
       )
       }
     )
+
+    useEffect(() => {
+      if (appState.triggeredError) {
+        window.scrollTo({top: 0, behavior: 'smooth' })
+      }
+      
+    }, [appState.errorMsg])
+    
+    
 
   return (
     <div className={styles["menu-container"]} style={{backgroundColor: appState.themeMenuBg }}>
@@ -42,8 +54,8 @@ function Menu(props) {
      <Settings />
 
      {/* Error Box */}
-     {appState.triggeredError && <ErrBox />}
-     
+     {appState.triggeredError && <ErrBox ref={errorBoxRef} />}
+
      {/* // Cards section */}
      <section className={styles["cards-section"]}>
      {cardElements}
