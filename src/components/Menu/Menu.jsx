@@ -55,7 +55,6 @@ function Menu(props) {
      {/* // Settings */}
      <Settings />
 
-     
      {/* // Cards section */}
      <section className={styles["cards-section"]}>
      {cardElements}

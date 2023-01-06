@@ -17,22 +17,16 @@ function TimerToggle() {
 
   return (
     
-    <div className={styles["timer-checkbox--container"]}>
-          <span className={styles["timer-checkbox"]}>
-          <input
-            type="checkbox"
-            id="timer-toggle"
-            name="timer-toggle"
-            checked={appState.activeTimer}
-            onChange={handleChange}
-            />
-          </span>
-
-          <label htmlFor="timer-toggle">
-            Set Timer
-          </label>
-        </div>
-
+    <div className={styles["timer-checkbox--wrapper"]}>
+      <label className={styles["checkbox-container"]}>Set timer
+        <input type="checkbox" 
+               checked={appState.activeTimer} 
+               id="timer-toggle"
+               name="timer-toggle"
+               onChange={handleChange} />
+        <span className={styles["checkmark"]} style={{backgroundColor: appState.themeAppBg, color: "white"}}></span>
+      </label>
+    </div>
     )
 
 }
