@@ -10,10 +10,7 @@
   },
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-sound": "^1.2.0",
-    "soundmanager2": "^2.97.20170602",
-    "use-sound": "^4.0.1"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.26",
