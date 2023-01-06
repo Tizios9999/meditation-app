@@ -6,6 +6,7 @@
     grid-template-rows: 50px auto 50px;
     grid-template-columns: 100%;
     justify-content: center;
+    font-size: 1.2em;
     
 }
 

@@ -19,7 +19,7 @@ export default function SetTimerButton(props) {
 
     return (
 
-    <button className={styles["timer--settings"]} onClick={handleClick}>
+    <button className={styles["timer--settings"]} style={{backgroundColor: appState.themeAppBg, color: "white"}} onClick={handleClick}>
       Set {props.value} minute{props.value > 1 ? "s" : ""}
      </button>
 

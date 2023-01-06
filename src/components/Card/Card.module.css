@@ -1,7 +1,6 @@
 .card {
     height: 300px;
     width: 250px;
-    background-color: lightgoldenrodyellow;
     border-radius: 9px;
     overflow: hidden;
     cursor: pointer;
