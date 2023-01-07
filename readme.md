@@ -112,7 +112,8 @@ To start meditating, you need to:
 
 If a timer has been set, you will be able to start it by clicking
 on the play button. You will hear a bell ring sound at the timer start
-and at the timer end (so you can meditate by closing your eyes)
+and at the timer end (so you can meditate with your eyes closed if
+you prefer doing it this way)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
