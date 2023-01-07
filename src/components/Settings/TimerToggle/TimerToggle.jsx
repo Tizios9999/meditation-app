@@ -2,6 +2,8 @@ import styles from '../Settings.module.css'
 import { AppContext } from '../../../contexts/AppContext'
 import { useContext } from 'react'
 
+// The timer toggle component activates or deactivates the timer on the meditation section
+
 function TimerToggle() {
   
   const [appState, setAppState] = useContext(AppContext);

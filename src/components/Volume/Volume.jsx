@@ -2,6 +2,8 @@ import styles from './Volume.module.css'
 import { useContext } from 'react'
 import { AppContext } from '../../contexts/AppContext'
 
+// This is the volume component for the background audio music.
+
 function Volume() {
     
     const [appState, setAppState] = useContext(AppContext);

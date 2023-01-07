@@ -5,6 +5,7 @@ import styles from '../Timer.module.css';
 import playSound from '../../../assets/js/playSound'
 import bellSound from '../../../assets/audio/bell.mp3'
 
+// This is the counter inside the timer component
 
 function TimerCounter() {
     

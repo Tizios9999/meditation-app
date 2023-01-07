@@ -5,6 +5,8 @@ import Timer from '../Timer/Timer'
 import BgVideo from '../BgVideo/BgVideo'
 import { AppContext } from '../../contexts/AppContext'
 
+// This is the meditation section, available after user settings confirmation
+
 export default function MeditationSection() {
 
     const [appState, setAppState] = useContext(AppContext);

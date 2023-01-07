@@ -7,7 +7,9 @@ import ConfirmSettings from '../ConfirmSettings/ConfirmSettings'
 import { useContext, useRef, useEffect } from 'react'
 import { AppContext } from '../../contexts/AppContext'
 import ErrBox from '../ErrBox/ErrBox'
-import SetTimerButton from '../Settings/TimerSettings/SetTimerButton/SetTimerButton'
+
+/* The menu component is responsible to set up the meditation section and let
+   the user choose their own settings before starting to meditate */
 
 function Menu(props) {
 

@@ -2,6 +2,10 @@ import { useContext } from 'react';
 import styles from './ConfirmSettings.module.css'
 import { AppContext } from '../../contexts/AppContext'
 
+/* This component will allow the user to access the meditation mode.
+   But before that it will check for any errors and prevent to continue
+   if any of those are found */
+
 export default function ConfirmSettings() {
   
   const [appState, setAppState] = useContext(AppContext);

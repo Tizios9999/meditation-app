@@ -1,5 +1,6 @@
 import { forwardRef } from 'react'
-// import Sound from 'react-sound'
+
+// This component is responsible for loading music
 
 function BgAudio(props, ref) {
 

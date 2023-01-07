@@ -6,6 +6,8 @@ import { AppContext } from '../../contexts/AppContext'
 import { useContext } from 'react'
 import TimerCounter from './counter/TimerCounter'
 
+// This is the timer component in the meditation section
+
 export default function Timer() {
 
   const [appState, setAppState] = useContext(AppContext)

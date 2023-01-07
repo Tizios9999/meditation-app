@@ -4,6 +4,7 @@ import { useContext } from 'react'
 import TimerToggle from './TimerToggle/TimerToggle'
 import TimerSettings from './TimerSettings/TimerSettings'
 
+// This component contains all the different settings components.
 
 function Settings() {
     

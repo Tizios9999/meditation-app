@@ -3,6 +3,8 @@ import { AppContext } from '../../../contexts/AppContext'
 import { useContext } from 'react'
 import SetTimerButton from './SetTimerButton/SetTimerButton'
 
+/* This component is responsible for setting the timer value on the meditation section */
+
 export default function TimerSettings() {
 
     const [appState, setAppState] = useContext(AppContext);
