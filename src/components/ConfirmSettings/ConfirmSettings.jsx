@@ -22,7 +22,7 @@ export default function ConfirmSettings() {
         isErrorTriggered = true;
       };
 
-      if (appState.timerSeconds == 0) {
+      if (appState.timerSeconds <= 0) {
         message = message + (isErrorTriggered ? ", " : "") + "Please insert a number higher than 0";
         isErrorTriggered = true;
       }
