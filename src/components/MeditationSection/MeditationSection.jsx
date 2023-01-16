@@ -2,7 +2,6 @@ import { useContext } from 'react'
 import styles from './MeditationSection.module.css'
 import Volume from '../Volume/Volume'
 import Timer from '../Timer/Timer'
-import BgVideo from '../BgVideo/BgVideo'
 import { AppContext } from '../../contexts/AppContext'
 
 // This is the meditation section, available after user settings confirmation
