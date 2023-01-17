@@ -121,8 +121,9 @@ you prefer doing it this way)
 
 ## Roadmap of possible future releases
 
-- [x] Update the timer settings to allow user to select seconds as well.
-- [x] Make it full stack by setting up a server that will provide the experiences via API call.
+- [x] Release the first working version
+- [ ] Update the timer settings to allow user to select seconds as well.
+- [ ] Make it full stack by setting up a server that will provide the experiences via API call.
 
 See the [open issues](https://github.com/Tizios9999/meditation-app/issues) for a full list of proposed features (and known issues).
 
