@@ -21,7 +21,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/Tizios9999/City-Info">
+  <a href="https://github.com/Tizios9999/meditation-app">
     <img src="https://www.kindpng.com/picc/m/160-1608792_circle-document-icon-png-transparent-png.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -30,14 +30,14 @@
   <p align="center">
     This is a meditation app. Set up the timer, the experience, and you're set to go!
     <br />
-    <a href="https://github.com/Tizios9999/City-Info"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/Tizios9999/meditation-app"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://cosmic-cascaron-e58dcb.netlify.app/">View Demo</a>
     ·
-    <a href="https://github.com/Tizios9999/City-Info/issues">Report Bug</a>
+    <a href="https://github.com/Tizios9999/meditation-app/issues">Report Bug</a>
     ·
-    <a href="https://github.com/Tizios9999/City-Info/issues">Request Feature</a>
+    <a href="https://github.com/Tizios9999/meditation-app/issues">Request Feature</a>
   </p>
 </div>
 
@@ -68,7 +68,7 @@
 
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://tizios9999.github.io/City-Info/dist)
+[![Product Name Screen Shot][product-screenshot]](https://cosmic-cascaron-e58dcb.netlify.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -119,12 +119,12 @@ you prefer doing it this way)
 
 <!-- ROADMAP -->
 
-## Roadmap
+## Roadmap of possible future releases
 
-- [x] Search for a Urban Area from Teleport API.
-- [x] Compare the scores from an Urban Area to a second one.
+- [x] Update the timer settings to allow user to select seconds as well.
+- [x] Make it full stack by setting up a server that will provide the experiences via API call.
 
-See the [open issues](https://github.com/Tizios9999/City-Info/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/Tizios9999/meditation-app/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -142,25 +142,25 @@ This is a course project aimed to evaluate my personal skills, so right now it's
 
 Davide Santonocito - davide.santonocito@outlook.com
 
-Project Link: [https://github.com/Tizios9999/City-Info/](https://github.com/Tizios9999/City-Info/)
+Project Link: [https://github.com/Tizios9999/meditation-app/](https://github.com/Tizios9999/meditation-app/)
 
-Live at: [https://tizios9999.github.io/City-Info/dist](https://tizios9999.github.io/City-Info/dist)
+Live at: [https://cosmic-cascaron-e58dcb.netlify.app/](https://cosmic-cascaron-e58dcb.netlify.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/Tizios9999/City-Info.svg?style=for-the-badge
-[contributors-url]: https://github.com/Tizios9999/City-Info/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/Tizios9999/City-Info.svg?style=for-the-badge
-[forks-url]: https://github.com/Tizios9999/City-Info/network/members
-[stars-shield]: https://img.shields.io/github/stars/Tizios9999/City-Info.svg?style=for-the-badge
-[stars-url]: https://github.com/Tizios9999/City-Info/stargazers
-[issues-shield]: https://img.shields.io/github/issues/Tizios9999/City-Info.svg?style=for-the-badge
-[issues-url]: https://github.com/Tizios9999/City-Info/issues
-[license-shield]: https://img.shields.io/github/license/Tizios9999/City-Info.svg?style=for-the-badge
-[license-url]: https://github.com/Tizios9999/City-Info/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/Tizios9999/meditation-app.svg?style=for-the-badge
+[contributors-url]: https://github.com/Tizios9999/meditation-app/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/Tizios9999/meditation-app.svg?style=for-the-badge
+[forks-url]: https://github.com/Tizios9999/meditation-app/network/members
+[stars-shield]: https://img.shields.io/github/stars/Tizios9999/meditation-app.svg?style=for-the-badge
+[stars-url]: https://github.com/Tizios9999/meditation-app/stargazers
+[issues-shield]: https://img.shields.io/github/issues/Tizios9999/meditation-app.svg?style=for-the-badge
+[issues-url]: https://github.com/Tizios9999/meditation-app/issues
+[license-shield]: https://img.shields.io/github/license/Tizios9999/meditation-app.svg?style=for-the-badge
+[license-url]: https://github.com/Tizios9999/meditation-app/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/davide-santonocito-36ab84170
-[product-screenshot]: src/img/preview.png
+[product-screenshot]: screenshots\MedAppMenu.png
