@@ -163,4 +163,4 @@ Live at: [https://cosmic-cascaron-e58dcb.netlify.app/](https://cosmic-cascaron-e
 [license-url]: https://github.com/Tizios9999/meditation-app/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/davide-santonocito-36ab84170
-[product-screenshot]: screenshots\MedAppMenu.png
+[product-screenshot]: screenshots/MedAppMenu.png
