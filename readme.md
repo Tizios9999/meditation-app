@@ -33,7 +33,7 @@
     <a href="https://github.com/Tizios9999/City-Info"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://tizios9999.github.io/City-Info/dist">View Demo</a>
+    <a href="https://cosmic-cascaron-e58dcb.netlify.app/">View Demo</a>
     ·
     <a href="https://github.com/Tizios9999/City-Info/issues">Report Bug</a>
     ·
