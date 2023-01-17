@@ -22,7 +22,7 @@ export default function TimerSettings() {
       }
 
     // Removing any 0 before the actual number, if it's not zero already
-      if (e.target.value > 0 && e.target.value.charAt(0) == '0') {
+      if (e.target.value >= 0 && e.target.value.charAt(0) == '0') {
         e.target.value = e.target.value.substring(1);
       }
 
