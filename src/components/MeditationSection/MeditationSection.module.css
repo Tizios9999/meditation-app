@@ -1,13 +1,19 @@
 .meditation-section {
     color: white;
     width: 100%;
-    height: calc(100vh - env(safe-area-inset-bottom));
+    height: 100%;
     display: grid;
     grid-template-rows: 50px auto 50px;
     grid-template-columns: 100%;
     justify-content: center;
     font-size: 1.2em;
     
+}
+
+@media (max-width: 1024px) {
+    .meditation-section {
+        grid-template-rows: 50px auto 50px env(safe-area-inset-bottom, 20px);
+    }
 }
 
 .menu-button {
