@@ -1,18 +1,23 @@
 .meditation-section {
     color: white;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     display: grid;
-    grid-template-rows: 50px auto 50px;
     grid-template-columns: 100%;
     justify-content: center;
     font-size: 1.2em;
     
 }
 
+@media (min-width: 1025px) {
+    .meditation-section {
+        grid-template-rows: 50px auto 50px 0;
+    }
+}
+
 @media (max-width: 1024px) {
     .meditation-section {
-        grid-template-rows: 50px auto 50px env(safe-area-inset-bottom, 20px);
+        grid-template-rows: 50px auto 50px 20px;
     }
 }
 
