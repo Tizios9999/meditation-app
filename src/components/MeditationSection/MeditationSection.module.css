@@ -17,7 +17,7 @@
 
 @media (max-width: 1024px) {
     .meditation-section {
-        grid-template-rows: 50px auto 50px 20px;
+        grid-template-rows: 50px auto 50px env(safe-area-inset-bottom, 50px);
     }
 }
 
