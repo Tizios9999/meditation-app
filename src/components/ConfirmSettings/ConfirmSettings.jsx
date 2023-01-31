@@ -8,10 +8,9 @@ import { AppContext } from '../../contexts/AppContext'
 
 export default function ConfirmSettings() {
   
-  const [appState, setAppState] = useContext(AppContext);
+  const [appState, setAppState, state, dispatch] = useContext(AppContext);
 
-  function handleClick() {
-
+  function checkForErrors() {
     let message = "";
     let isErrorTriggered = false;
 
@@ -27,22 +26,26 @@ export default function ConfirmSettings() {
         isErrorTriggered = true;
       }
 
-      if (appState.selectedCard === null) {
-        message = message + (isErrorTriggered ? ", " : "") + "Please select a card";
-        isErrorTriggered = true;
-      };
-
     }
 
-    setAppState(prevState => {
-        return {
-          ...prevState,
-          meditationMode: isErrorTriggered ? prevState.meditationMode : !prevState.meditationMode,
-          errorMsg: message,
-          triggeredError: isErrorTriggered
-        };
-      })
-    
+    if (appState.selectedCard === null) {
+      message = message + (isErrorTriggered ? ", " : "") + "Please select a card";
+      isErrorTriggered = true;
+    };
+
+    if (isErrorTriggered) {
+      dispatch({type: "TRIGGER_ERROR_BOX", payload: {message: message, isErrorTriggered: isErrorTriggered}})
+    }
+
+    return isErrorTriggered;
+  }
+
+  function handleClick() {
+
+    if (checkForErrors()) {
+      return
+    } else dispatch({type: "SWITCH_MODE"});
+
 }
 
   return (

@@ -44,7 +44,7 @@ function App() {
       <div className="App">
           {appState.bgVideoSrc && <BgVideo />}
           <BgAudio ref={audioRef} />
-          {appState.meditationMode ? <MeditationSection /> : <Menu playback={playback} /> }
+          {state.meditationMode ? <MeditationSection /> : <Menu playback={playback} /> }
       </div>
       </section>
   )

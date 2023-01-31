@@ -8,8 +8,6 @@ function Card(props) {
 
     function handleClick() {
 
-    console.log(props.theme.bgMusicSrc);
-
         setAppState(prevState => {
           return (
             {

@@ -9,11 +9,33 @@ function reducer(state, action) {
         ...state,
         volume: action.payload
         };
-     case "SELECTED_CARD": {
+
+     case "SELECT_CARD":
        console.log(state.selectedCard);
-     };
+       return
+
+     case "SWITCH_MODE":
+        return {
+            ...state,
+            meditationMode: !state.meditationMode,
+        }
+
+     case "STOP_TIMER":
+        return {
+            ...state,
+            timerStatus: "stop",
+            elapsedSeconds: 0
+        }
+
+     case "TRIGGER_ERROR_BOX":
+        return {
+            ...state,
+            errorMsg: action.payload.message,
+            triggeredError: action.payload.isErrorTriggered
+        }
+
      default: {
-        throw Error('Unknown command: ' + action.type);
+        throw Error('Unknown action: ' + action.type);
      }
     } 
    }

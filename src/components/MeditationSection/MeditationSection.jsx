@@ -8,17 +8,11 @@ import { AppContext } from '../../contexts/AppContext'
 
 export default function MeditationSection() {
 
-    const [appState, setAppState] = useContext(AppContext);
+    const [appState, setAppState, state, dispatch] = useContext(AppContext);
 
     function handleClick() {
-        setAppState(prevState => {
-            return {
-              ...prevState,
-              meditationMode: !prevState.meditationMode,
-              timerStatus: "stop",
-              elapsedSeconds: 0
-            };
-          })
+        dispatch({type: "SWITCH_MODE"});
+        dispatch({type: "STOP_TIMER"});
     }
     
 

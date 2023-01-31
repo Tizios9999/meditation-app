@@ -13,7 +13,7 @@ import ErrBox from '../ErrBox/ErrBox'
 
 function Menu(props) {
 
-  const [appState, setAppState] = useContext(AppContext);
+  const [appState, setAppState, state, dispatch] = useContext(AppContext);
 
   const cardElements = cardData.map((card) => {
     
@@ -52,7 +52,7 @@ function Menu(props) {
      <Volume />
 
     {/* Error Box */}
-    {appState.triggeredError && <ErrBox />}
+    {state.triggeredError && <ErrBox />}
 
      {/* // Settings */}
      <Settings />
