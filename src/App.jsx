@@ -6,19 +6,19 @@ import BgAudio from './components/BgAudio/BgAudio'
 import BgVideo from './components/BgVideo/BgVideo'
 
 function App() {
-  const [appState, setAppState] = useContext(AppContext);
+  const [appState, setAppState, state, dispatch] = useContext(AppContext);
 
   const audioRef = useRef(null);
 
   function playback(bgSrc) {
     audioRef.current.pause();
     audioRef.current.src = bgSrc;
-    audioRef.current.volume = appState.volume / 100;
+    audioRef.current.volume = state.volume / 100;
     audioRef.current.play();
   }
 
   function changeVolume() {
-    audioRef.current.volume = appState.volume / 100
+    audioRef.current.volume = state.volume / 100
   }
 
   function toggleBg() {
@@ -35,7 +35,7 @@ function App() {
 
   useEffect(() => {
     changeVolume()
-  }, [appState.volume])
+  }, [state.volume])
 
 
 

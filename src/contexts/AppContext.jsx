@@ -1,6 +1,22 @@
-import {useState, createContext} from 'react'
+import {useState, createContext, useReducer } from 'react'
 
 export const AppContext = createContext();
+
+function reducer(state, action) {
+    switch (action.type) {
+     case "SET_VOLUME":
+       return {
+        ...state,
+        volume: action.payload
+        };
+     case "SELECTED_CARD": {
+       console.log(state.selectedCard);
+     };
+     default: {
+        throw Error('Unknown command: ' + action.type);
+     }
+    } 
+   }
 
 export function AppProvider(props) {
 
@@ -22,8 +38,10 @@ export function AppProvider(props) {
         }
     )
 
+    const [state, dispatch] = useReducer(reducer, appState);
+
     return (
-        <AppContext.Provider value={[appState, setAppState]}>
+        <AppContext.Provider value={[appState, setAppState, state, dispatch]}>
             {props.children}
         </AppContext.Provider>
     )
