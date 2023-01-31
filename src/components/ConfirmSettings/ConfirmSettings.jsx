@@ -16,12 +16,12 @@ export default function ConfirmSettings() {
 
     if (state.activeTimer) {
 
-      if (isNaN(Number(appState.timerSeconds))) {
+      if (isNaN(Number(state.timerSeconds))) {
         message = message + (isErrorTriggered ? ", " : "") + "Please insert a number";
         isErrorTriggered = true;
       };
 
-      if (appState.timerSeconds <= 0) {
+      if (state.timerSeconds <= 0) {
         message = message + (isErrorTriggered ? ", " : "") + "Please insert a number higher than 0";
         isErrorTriggered = true;
       }
@@ -33,7 +33,7 @@ export default function ConfirmSettings() {
       isErrorTriggered = true;
     };
 
-    if (isErrorTriggered) {
+    
       dispatch(
         {
           type: "TRIGGER_ERROR_BOX", 
@@ -42,7 +42,6 @@ export default function ConfirmSettings() {
           }
         }
       )
-    }
 
     return isErrorTriggered;
   }
