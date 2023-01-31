@@ -13,7 +13,7 @@ import ErrBox from '../ErrBox/ErrBox'
 
 function Menu(props) {
 
-  const [appState, setAppState, state, dispatch] = useContext(AppContext);
+  const [state, dispatch] = useContext(AppContext);
 
   const cardElements = cardData.map((card) => {
     

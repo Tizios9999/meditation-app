@@ -7,7 +7,7 @@ import { AppContext } from '../../contexts/AppContext'
 
 function ErrBox() {
 
-const [appState, setAppState, state] = useContext(AppContext);
+const [state] = useContext(AppContext);
 
   return (
           <div className={styles["error-box"]}>

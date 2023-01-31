@@ -8,7 +8,7 @@ import { AppContext } from '../../contexts/AppContext'
 
 export default function ConfirmSettings() {
   
-  const [appState, setAppState, state, dispatch] = useContext(AppContext);
+  const [state, dispatch] = useContext(AppContext);
 
   function checkForErrors() {
     let message = "";

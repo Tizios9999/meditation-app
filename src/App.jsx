@@ -6,7 +6,7 @@ import BgAudio from './components/BgAudio/BgAudio'
 import BgVideo from './components/BgVideo/BgVideo'
 
 function App() {
-  const [appState, setAppState, state, dispatch] = useContext(AppContext);
+  const [state, dispatch] = useContext(AppContext);
 
   const audioRef = useRef(null);
 

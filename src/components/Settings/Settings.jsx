@@ -8,7 +8,7 @@ import TimerSettings from './TimerSettings/TimerSettings'
 
 function Settings() {
     
-  const [appState, setAppState, state, dispatch] = useContext(AppContext);
+  const [state, dispatch] = useContext(AppContext);
 
     return (
       <div className={styles["settings-container"]}>

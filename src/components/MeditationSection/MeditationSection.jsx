@@ -8,7 +8,7 @@ import { AppContext } from '../../contexts/AppContext'
 
 export default function MeditationSection() {
 
-    const [appState, setAppState, state, dispatch] = useContext(AppContext);
+    const [state, dispatch] = useContext(AppContext);
 
     function handleClick() {
         dispatch({type: "SWITCH_MODE"});

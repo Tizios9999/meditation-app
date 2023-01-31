@@ -4,7 +4,7 @@ import { AppContext } from '../../contexts/AppContext'
 
 function Card(props) {
 
-    const [appState, setAppState, state, dispatch] = useContext(AppContext);
+    const [state, dispatch] = useContext(AppContext);
 
     function handleClick() {
 

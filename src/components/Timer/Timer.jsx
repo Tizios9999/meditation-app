@@ -10,7 +10,7 @@ import TimerCounter from './counter/TimerCounter'
 
 export default function Timer() {
 
-  const [appState, setAppState, state, dispatch] = useContext(AppContext)
+  const [state, dispatch] = useContext(AppContext)
 
   function handleClick(status) {
 

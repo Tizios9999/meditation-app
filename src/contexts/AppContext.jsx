@@ -1,4 +1,4 @@
-import {useState, createContext, useReducer } from 'react'
+import { createContext, useReducer } from 'react'
 
 export const AppContext = createContext();
 
@@ -65,7 +65,7 @@ function reducer(state, action) {
 
 export function AppProvider(props) {
 
-    const [appState, setAppState] = useState(
+const initialState = 
         {
             activeTimer: true,
             timerStatus: "stop",
@@ -81,12 +81,11 @@ export function AppProvider(props) {
             triggeredError: false,
             errorMsg: "Any error will be shown here in this div",
         }
-    )
 
-    const [state, dispatch] = useReducer(reducer, appState);
+    const [state, dispatch] = useReducer(reducer, initialState);
 
     return (
-        <AppContext.Provider value={[appState, setAppState, state, dispatch]}>
+        <AppContext.Provider value={[state, dispatch]}>
             {props.children}
         </AppContext.Provider>
     )

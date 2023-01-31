@@ -6,7 +6,7 @@ import { AppContext } from '../../contexts/AppContext'
 
 function Volume() {
     
-    const [appState, setAppState, state, dispatch] = useContext(AppContext);
+    const [state, dispatch] = useContext(AppContext);
 
     return (
         <div className={styles["volume-container"]}>

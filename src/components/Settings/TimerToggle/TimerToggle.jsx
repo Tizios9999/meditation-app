@@ -6,7 +6,7 @@ import { useContext } from 'react'
 
 function TimerToggle() {
   
-  const [appState, setAppState, state, dispatch] = useContext(AppContext);
+  const [state, dispatch] = useContext(AppContext);
 
   function handleChange() {
      dispatch({type: "TOGGLE_TIMER"});

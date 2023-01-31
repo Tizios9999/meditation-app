@@ -7,7 +7,7 @@ import SetTimerButton from './SetTimerButton/SetTimerButton'
 
 export default function TimerSettings() {
 
-    const [appState, setAppState, state, dispatch] = useContext(AppContext);
+    const [state, dispatch] = useContext(AppContext);
 
     function handleChange(e) {
 
