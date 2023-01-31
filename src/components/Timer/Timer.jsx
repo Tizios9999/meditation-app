@@ -14,14 +14,6 @@ export default function Timer() {
 
   function handleClick(status) {
 
-    // setAppState(prevState => {
-    //   return {
-    //     ...prevState,
-    //     timerStatus: status,
-    //     elapsedSeconds: status == "stop" ? 0 : prevState.elapsedSeconds
-    //   };
-    // })
-
     dispatch({type: "CHANGE_TIMER_STATUS", payload: status})
 
   }

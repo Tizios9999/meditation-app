@@ -8,18 +8,6 @@ function Card(props) {
 
     function handleClick() {
 
-        // setAppState(prevState => {
-        //   return (
-        //     {
-        //       ...prevState,
-        //       selectedCard: props.id,
-        //       themeAppBg: props.theme.backgroundColor,
-        //       themeMenuBg: props.theme.color,
-        //       bgVideoSrc: props.theme.bgVideoSrc,
-        //     }
-        //   )
-        // })
-
         dispatch (
            {
             type: "SELECT_CARD", 

@@ -8,24 +8,6 @@ function Volume() {
     
     const [appState, setAppState, state, dispatch] = useContext(AppContext);
 
-    function modifyVolume(e) {
-        setAppState(prevState => {
-            return {
-              ...prevState,
-              volume: e.target.value
-            };
-          })
-    }
-
-    function setVolume(value) {
-        setAppState(prevState => {
-            return {
-              ...prevState,
-              volume: value
-            };
-          })
-    }
-
     return (
         <div className={styles["volume-container"]}>
             <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-volume-3" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="white" fill="none" strokeLinecap="round" strokeLinejoin="round" onClick={() => dispatch({type: "SET_VOLUME", payload: 0})}>

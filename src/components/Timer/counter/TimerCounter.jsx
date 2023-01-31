@@ -16,8 +16,6 @@ function TimerCounter() {
 
   function updateTimer() {
     // Setting the time elapsed since the timer started.
-    
-    // setAppState((prevState) => ({ ...prevState, elapsedSeconds: prevState.elapsedSeconds + 1 }));
 
     dispatch({type: "TICK"});
 

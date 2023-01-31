@@ -26,16 +26,8 @@ export default function TimerSettings() {
         e.target.value = e.target.value.substring(1);
       }
 
-        // setAppState(prevState => {
-        //   return {
-        //     ...prevState,
-        //     timerSeconds: e.target.value * 60
-        //   };
-        // })
-
         dispatch({type: "SET_TIMER_MINUTES", payload: e.target.value * 60})
       }
-
 
     return (
 
