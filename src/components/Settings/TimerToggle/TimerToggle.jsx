@@ -6,15 +6,10 @@ import { useContext } from 'react'
 
 function TimerToggle() {
   
-  const [appState, setAppState] = useContext(AppContext);
+  const [appState, setAppState, state, dispatch] = useContext(AppContext);
 
   function handleChange() {
-    setAppState(prevState => {
-      return {
-        ...prevState,
-        activeTimer: !prevState.activeTimer
-      };
-    })
+     dispatch({type: "TOGGLE_TIMER"});
   }
 
   return (
@@ -22,7 +17,7 @@ function TimerToggle() {
     <div className={styles["timer-checkbox--wrapper"]}>
       <label className={styles["checkbox-container"]}>Set timer
         <input type="checkbox" 
-               checked={appState.activeTimer} 
+               checked={state.activeTimer} 
                id="timer-toggle"
                name="timer-toggle"
                onChange={handleChange} />

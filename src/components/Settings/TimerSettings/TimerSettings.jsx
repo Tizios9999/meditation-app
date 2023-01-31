@@ -7,7 +7,7 @@ import SetTimerButton from './SetTimerButton/SetTimerButton'
 
 export default function TimerSettings() {
 
-    const [appState, setAppState] = useContext(AppContext);
+    const [appState, setAppState, state, dispatch] = useContext(AppContext);
 
     function handleChange(e) {
 
@@ -26,12 +26,14 @@ export default function TimerSettings() {
         e.target.value = e.target.value.substring(1);
       }
 
-        setAppState(prevState => {
-          return {
-            ...prevState,
-            timerSeconds: e.target.value * 60
-          };
-        })
+        // setAppState(prevState => {
+        //   return {
+        //     ...prevState,
+        //     timerSeconds: e.target.value * 60
+        //   };
+        // })
+
+        dispatch({type: "SET_TIMER_MINUTES", payload: e.target.value * 60})
       }
 
 
@@ -52,7 +54,7 @@ export default function TimerSettings() {
             max="999"
             size="3"
             maxLength="3"
-            value={appState.timerSeconds/60}
+            value={state.timerSeconds/60}
             onChange={handleChange}
             className={styles["input-minutes"]}/>
 

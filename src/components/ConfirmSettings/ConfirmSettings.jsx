@@ -14,7 +14,7 @@ export default function ConfirmSettings() {
     let message = "";
     let isErrorTriggered = false;
 
-    if (appState.activeTimer) {
+    if (state.activeTimer) {
 
       if (isNaN(Number(appState.timerSeconds))) {
         message = message + (isErrorTriggered ? ", " : "") + "Please insert a number";
@@ -34,7 +34,14 @@ export default function ConfirmSettings() {
     };
 
     if (isErrorTriggered) {
-      dispatch({type: "TRIGGER_ERROR_BOX", payload: {message: message, isErrorTriggered: isErrorTriggered}})
+      dispatch(
+        {
+          type: "TRIGGER_ERROR_BOX", 
+          payload: {
+            message: message, isErrorTriggered: isErrorTriggered
+          }
+        }
+      )
     }
 
     return isErrorTriggered;

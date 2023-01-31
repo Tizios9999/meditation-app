@@ -19,7 +19,7 @@ export default function MeditationSection() {
     return (
         <div className={styles["meditation-section"]}>
             <button className={styles["menu-button"]} style={{backgroundColor: appState.themeAppBg, color: "white"}} onClick={handleClick}>Settings</button>
-            {appState.activeTimer ? <Timer /> : <div />}
+            {state.activeTimer ? <Timer /> : <div />}
             <Volume />
             <div/>
         </div>

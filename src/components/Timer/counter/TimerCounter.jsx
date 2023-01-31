@@ -9,9 +9,9 @@ import bellSound from '../../../assets/audio/bell.mp3'
 
 function TimerCounter() {
     
-  const [appState, setAppState] = useContext(AppContext);
+  const [appState, setAppState, state, dispatch] = useContext(AppContext);
 
-  let timerMinutes = zeroFill(Math.floor((appState.timerSeconds - appState.elapsedSeconds) / 60), 2);
+  let timerMinutes = zeroFill(Math.floor((state.timerSeconds - appState.elapsedSeconds) / 60), 2);
   let timerSeconds = zeroFill((appState.timerSeconds - appState.elapsedSeconds) % 60, 2);
 
   function updateTimer() {

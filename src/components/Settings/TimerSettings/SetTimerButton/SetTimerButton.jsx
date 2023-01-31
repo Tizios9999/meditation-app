@@ -6,16 +6,10 @@ import { useContext } from 'react'
 
 export default function SetTimerButton(props) {
 
-    const [appState, setAppState] = useContext(AppContext);
+    const [appState, setAppState, state, dispatch] = useContext(AppContext);
 
-    function handleClick(e) {
-
-        setAppState(prevState => {
-          return {
-            ...prevState,
-            timerSeconds: props.value * 60
-          };
-        })
+    function handleClick() {
+        dispatch({type: "SET_TIMER_MINUTES", payload: props.value * 60 })
       }
 
 

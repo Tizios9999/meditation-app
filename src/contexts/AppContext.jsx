@@ -34,6 +34,18 @@ function reducer(state, action) {
             triggeredError: action.payload.isErrorTriggered
         }
 
+     case "TOGGLE_TIMER":
+        return {
+            ...state,
+            activeTimer: !state.activeTimer
+     }
+
+     case "SET_TIMER_MINUTES":
+        return {
+            ...state,
+            timerSeconds: action.payload
+        }
+
      default: {
         throw Error('Unknown action: ' + action.type);
      }
