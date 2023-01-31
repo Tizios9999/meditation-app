@@ -12,7 +12,7 @@ export default function MeditationSection() {
 
     function handleClick() {
         dispatch({type: "SWITCH_MODE"});
-        dispatch({type: "STOP_TIMER"});
+        dispatch({type: "CHANGE_TIMER_STATUS", payload: "stop"});
     }
     
 

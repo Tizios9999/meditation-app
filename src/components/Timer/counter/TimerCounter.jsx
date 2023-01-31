@@ -11,45 +11,44 @@ function TimerCounter() {
     
   const [appState, setAppState, state, dispatch] = useContext(AppContext);
 
-  let timerMinutes = zeroFill(Math.floor((state.timerSeconds - appState.elapsedSeconds) / 60), 2);
-  let timerSeconds = zeroFill((appState.timerSeconds - appState.elapsedSeconds) % 60, 2);
+  let timerMinutes = zeroFill(Math.floor((state.timerSeconds - state.elapsedSeconds) / 60), 2);
+  let timerSeconds = zeroFill((state.timerSeconds - state.elapsedSeconds) % 60, 2);
 
   function updateTimer() {
     // Setting the time elapsed since the timer started.
-    setAppState((prevState) => ({ ...prevState, elapsedSeconds: prevState.elapsedSeconds + 1 }));
+    
+    // setAppState((prevState) => ({ ...prevState, elapsedSeconds: prevState.elapsedSeconds + 1 }));
 
-    if (appState.timerSeconds - appState.elapsedSeconds == 1) {
+    dispatch({type: "TICK"});
+
+    if (state.timerSeconds - state.elapsedSeconds == 1) {
     // Here is the "ding" sound as a reminder that the timer has stopped.
     // The sound won't play immediately so there's a 1 second offset. Need to fix this.
       playSound(bellSound);
     }
 
     // Check if the elapsed time has reached the timer set by the user so the countdown will stop.
-    if (appState.timerSeconds - appState.elapsedSeconds == 0) {
-      
-      
-      
+    if (state.timerSeconds - state.elapsedSeconds == 0) {
 
       // Stop the timer and reset the time elapsed
-      setAppState((prevState) => ({ ...prevState, timerStatus: "stop", elapsedSeconds: 0 }));;
-
       
+      dispatch({type: "CHANGE_TIMER_STATUS", payload: "stop"});
       
     }
   };
 
   useEffect(() => {
 
-    if (appState.timerStatus === "play") {
+    if (state.timerStatus === "play") {
 
-    appState.elapsedSeconds == 0 && playSound(bellSound);
+    state.elapsedSeconds == 0 && playSound(bellSound);
 
     const interval = setInterval(updateTimer, 1000); 
 
     return () => clearInterval(interval);
 
 }
-  }, [appState.timerStatus, appState.elapsedSeconds]);
+  }, [state.timerStatus, state.elapsedSeconds]);
   
   return (
     <div className={styles["timer-counter-wrapper"]}>

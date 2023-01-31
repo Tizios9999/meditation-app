@@ -25,11 +25,11 @@ function reducer(state, action) {
             meditationMode: !state.meditationMode,
         }
 
-     case "STOP_TIMER":
+     case "CHANGE_TIMER_STATUS": 
         return {
             ...state,
-            timerStatus: "stop",
-            elapsedSeconds: 0
+            timerStatus: action.payload,
+            elapsedSeconds: action.payload === "stop" ? 0 : state.elapsedSeconds
         }
 
      case "TRIGGER_ERROR_BOX":
@@ -49,6 +49,12 @@ function reducer(state, action) {
         return {
             ...state,
             timerSeconds: action.payload
+        }
+
+     case "TICK":
+        return {
+            ...state,
+            elapsedSeconds: state.elapsedSeconds + 1
         }
 
      default: {

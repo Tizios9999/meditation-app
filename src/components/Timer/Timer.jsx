@@ -10,17 +10,20 @@ import TimerCounter from './counter/TimerCounter'
 
 export default function Timer() {
 
-  const [appState, setAppState] = useContext(AppContext)
+  const [appState, setAppState, state, dispatch] = useContext(AppContext)
 
   function handleClick(status) {
-    console.log(status)
-    setAppState(prevState => {
-      return {
-        ...prevState,
-        timerStatus: status,
-        elapsedSeconds: status == "stop" ? 0 : prevState.elapsedSeconds
-      };
-    })
+
+    // setAppState(prevState => {
+    //   return {
+    //     ...prevState,
+    //     timerStatus: status,
+    //     elapsedSeconds: status == "stop" ? 0 : prevState.elapsedSeconds
+    //   };
+    // })
+
+    dispatch({type: "CHANGE_TIMER_STATUS", payload: status})
+
   }
 
     return (
@@ -28,9 +31,9 @@ export default function Timer() {
             <div className={styles["timer-element"]}>
                 <div className={styles["timer-box"]}>
                   <div className={styles["timer-buttons-wrapper"]}>
-                    {appState.timerStatus !== "play" && <PlayButton onClick={() => handleClick("play")}/>}
-                    {appState.timerStatus === "play" && <PauseButton onClick={() => handleClick("pause")} />}
-                    {appState.timerStatus !== "stop" && <StopButton onClick={() => handleClick("stop")}/>}
+                    {state.timerStatus !== "play" && <PlayButton onClick={() => handleClick("play")}/>}
+                    {state.timerStatus === "play" && <PauseButton onClick={() => handleClick("pause")} />}
+                    {state.timerStatus !== "stop" && <StopButton onClick={() => handleClick("stop")}/>}
                   </div>
                     <TimerCounter />
                 </div>
