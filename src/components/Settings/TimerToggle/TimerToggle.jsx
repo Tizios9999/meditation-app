@@ -21,7 +21,7 @@ function TimerToggle() {
                id="timer-toggle"
                name="timer-toggle"
                onChange={handleChange} />
-        <span className={styles["checkmark"]} style={{backgroundColor: appState.themeAppBg, color: "white"}}></span>
+        <span className={styles["checkmark"]} style={{backgroundColor: state.themeAppBg, color: "white"}}></span>
       </label>
     </div>
     )

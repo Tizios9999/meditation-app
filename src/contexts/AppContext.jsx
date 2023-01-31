@@ -11,8 +11,13 @@ function reducer(state, action) {
         };
 
      case "SELECT_CARD":
-       console.log(state.selectedCard);
-       return
+       return {
+        ...state,
+        selectedCard: action.payload.selectedCard,
+        themeAppBg: action.payload.themeAppBg,
+        themeMenuBg: action.payload.themeMenuBg,
+        bgVideoSrc: action.payload.bgVideoSrc
+       }
 
      case "SWITCH_MODE":
         return {

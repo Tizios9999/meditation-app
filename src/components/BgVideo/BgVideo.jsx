@@ -5,9 +5,9 @@ import { AppContext } from '../../contexts/AppContext'
 
 export default function BgVideo() {
 
-  const [appState, setAppState] = useContext(AppContext);
+  const [appState, setAppState, state] = useContext(AppContext);
 
   return (
-    <video src={appState.bgVideoSrc} autoPlay loop muted />
+    <video src={state.bgVideoSrc} autoPlay loop muted />
         )
 }

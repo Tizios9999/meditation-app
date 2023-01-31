@@ -8,14 +8,14 @@ import TimerSettings from './TimerSettings/TimerSettings'
 
 function Settings() {
     
-  const [appState, setAppState] = useContext(AppContext);
+  const [appState, setAppState, state, dispatch] = useContext(AppContext);
 
     return (
       <div className={styles["settings-container"]}>
         
         <TimerToggle />
 
-        {appState.activeTimer && <TimerSettings />}
+        {state.activeTimer && <TimerSettings />}
         
       </div>
       )

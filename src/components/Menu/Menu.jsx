@@ -4,7 +4,7 @@ import Card from '../Card/Card'
 import styles from './Menu.module.css'
 import cardData from '../../data/cards'
 import ConfirmSettings from '../ConfirmSettings/ConfirmSettings'
-import { useContext, useRef, useEffect } from 'react'
+import { useContext, useEffect } from 'react'
 import { AppContext } from '../../contexts/AppContext'
 import ErrBox from '../ErrBox/ErrBox'
 
@@ -35,16 +35,16 @@ function Menu(props) {
     )
 
     useEffect(() => {
-      if (appState.triggeredError) {
+      if (state.triggeredError) {
         window.scrollTo({top: 0, behavior: 'smooth' })
       }
       
-    }, [appState.errorMsg])
+    }, [state.errorMsg])
     
     
 
   return (
-    <div className={styles["menu-container"]} style={{backgroundColor: appState.themeMenuBg }}>
+    <div className={styles["menu-container"]} style={{backgroundColor: state.themeMenuBg }}>
 
      <h1 className={styles["app-title"]}>Meditation App</h1>
 

@@ -22,7 +22,7 @@ function App() {
   }
 
   function toggleBg() {
-    if (appState.bgVideoSrc === null && appState.selectedCard !== null) {
+    if (state.bgVideoSrc === null && state.selectedCard !== null) {
       document.body.classList.add("background-effect");
     } else {
       document.body.classList.remove("background-effect");
@@ -31,7 +31,7 @@ function App() {
 
   useEffect(() => {
     toggleBg()
-  }, [appState.selectedCard])
+  }, [state.selectedCard])
 
   useEffect(() => {
     changeVolume()
@@ -42,7 +42,7 @@ function App() {
   return (
     <section>
       <div className="App">
-          {appState.bgVideoSrc && <BgVideo />}
+          {state.bgVideoSrc && <BgVideo />}
           <BgAudio ref={audioRef} />
           {state.meditationMode ? <MeditationSection /> : <Menu playback={playback} /> }
       </div>

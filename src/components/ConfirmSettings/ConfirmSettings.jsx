@@ -28,7 +28,7 @@ export default function ConfirmSettings() {
 
     }
 
-    if (appState.selectedCard === null) {
+    if (state.selectedCard === null) {
       message = message + (isErrorTriggered ? ", " : "") + "Please select a card";
       isErrorTriggered = true;
     };
@@ -57,7 +57,7 @@ export default function ConfirmSettings() {
 
   return (
     <div className={styles["confirm-settings-wrapper"]}>
-      <button style={{backgroundColor: appState.themeAppBg, color: "white"}} onClick={handleClick}>Start meditation</button>
+      <button style={{backgroundColor: state.themeAppBg, color: "white"}} onClick={handleClick}>Start meditation</button>
     </div>
   )
 }
