@@ -4,11 +4,14 @@ import MeditationSection from './components/MeditationSection/MeditationSection'
 import { AppContext } from './contexts/AppContext'
 import BgAudio from './components/BgAudio/BgAudio'
 import BgVideo from './components/BgVideo/BgVideo'
+import classNames from 'classnames'
 
 function App() {
   const [state] = useContext(AppContext);
 
   const audioRef = useRef(null);
+
+  const backgroundEffectClass = classNames("App", { "background-effect": state.bgVideoSrc === null && state.selectedCard !== null});
 
   function playback(bgSrc) {
     audioRef.current.pause();
@@ -22,11 +25,9 @@ function App() {
   }
 
   function toggleBg() {
-    if (state.bgVideoSrc === null && state.selectedCard !== null) {
-      document.body.classList.add("background-effect");
-    } else {
-      document.body.classList.remove("background-effect");
-    }
+
+    document.body.className = backgroundEffectClass;
+
   }
 
   useEffect(() => {
@@ -36,7 +37,6 @@ function App() {
   useEffect(() => {
     changeVolume()
   }, [state.volume])
-
 
 
   return (
