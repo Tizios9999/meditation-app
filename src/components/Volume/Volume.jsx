@@ -1,4 +1,4 @@
-import styles from './Volume.module.css'
+import styles from './Volume.module.scss'
 import { useContext } from 'react'
 import { AppContext } from '../../contexts/AppContext'
 

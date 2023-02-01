@@ -1,4 +1,4 @@
-import styles from '../Settings.module.css'
+import styles from '../Settings.module.scss'
 import { AppContext } from '../../../contexts/AppContext'
 import { useContext } from 'react'
 import SetTimerButton from './SetTimerButton/SetTimerButton'

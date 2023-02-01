@@ -1,7 +1,7 @@
 import Volume from '../Volume/Volume';
 import Settings from '../Settings/Settings'
 import Card from '../Card/Card'
-import styles from './Menu.module.css'
+import styles from './Menu.module.scss'
 import cardData from '../../data/cards'
 import ConfirmSettings from '../ConfirmSettings/ConfirmSettings'
 import { useContext, useEffect } from 'react'

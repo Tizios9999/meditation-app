@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import styles from './MeditationSection.module.css'
+import styles from './MeditationSection.module.scss'
 import Volume from '../Volume/Volume'
 import Timer from '../Timer/Timer'
 import { AppContext } from '../../contexts/AppContext'

@@ -1,7 +1,7 @@
 import { useEffect, useContext } from 'react';
 import { AppContext } from '../../../contexts/AppContext'
 import zeroFill from '../../../assets/js/zeroFill'
-import styles from '../Timer.module.css';
+import styles from '../Timer.module.scss';
 import playSound from '../../../assets/js/playSound'
 import bellSound from '../../../assets/audio/bell.mp3'
 

@@ -1,0 +1,122 @@
+.settings-container {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	font-size: 1.2em;
+	font-weight: normal;
+	color: white;
+	max-width: 400px;
+	background-color: rgba(0,0,0,0.30);
+	margin: 0 auto;
+}
+.timer-checkbox--wrapper {
+	margin: 15px;
+}
+.timer-checkbox {
+	margin-right: 5px;
+	width: 60px;
+}
+.timer--settings {
+	margin: 15px;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	justify-items: center;
+}
+.input-minutes {
+	align-self: center;
+	margin-bottom: 10px;
+	margin-left: 10px;
+	width: 65px;
+	border: none;
+	background-color: transparent;
+	border-bottom: 1px solid white;
+	color: white;
+	font-size: 1em;
+	text-align: center;
+}
+.input-countdown {
+	align-self: center;
+	margin-bottom: 10px;
+	margin-left: 10px;
+	width: 65px;
+	border: none;
+	background-color: transparent;
+	border-bottom: 1px solid white;
+	color: white;
+	font-size: 1em;
+	text-align: center;
+}
+.timer-buttons-wrapper {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+}
+.checkbox-container {
+	display: flex;
+	flex-direction: reverse;
+	justify-content: center;
+	position: relative;
+	padding-left: 35px;
+	margin-bottom: 12px;
+	cursor: pointer;
+	font-size: 22px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	width: 100px;
+	margin: 0 auto;
+	input {
+		position: absolute;
+		opacity: 0;
+		cursor: pointer;
+		height: 0;
+		width: 0;
+		&:checked {
+			~ {
+				.checkmark {
+					background-color: #2196F3;
+					&:after {
+						display: block;
+					}
+				}
+			}
+		}
+	}
+	&:hover {
+		input {
+			~ {
+				.checkmark {
+					background-color: #ccc;
+				}
+			}
+		}
+	}
+	.checkmark {
+		&:after {
+			left: 9px;
+			top: 5px;
+			width: 5px;
+			height: 10px;
+			border: solid white;
+			border-width: 0 3px 3px 0;
+			-webkit-transform: rotate(45deg);
+			-ms-transform: rotate(45deg);
+			transform: rotate(45deg);
+		}
+	}
+}
+.checkmark {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 25px;
+	width: 25px;
+	background-color: #eee;
+	&:after {
+		content: "";
+		position: absolute;
+		display: none;
+	}
+}

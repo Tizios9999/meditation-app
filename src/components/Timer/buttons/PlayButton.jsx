@@ -1,4 +1,4 @@
-import styles from './TimerButtons.module.css';
+import styles from './TimerButtons.module.scss';
 
 export default function PlayButton(props) {
     return (

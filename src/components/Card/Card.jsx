@@ -1,4 +1,4 @@
-import styles from './Card.module.css'
+import styles from './Card.module.scss'
 import { useContext } from 'react'
 import { AppContext } from '../../contexts/AppContext'
 

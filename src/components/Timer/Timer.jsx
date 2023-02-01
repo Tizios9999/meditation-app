@@ -1,4 +1,4 @@
-import styles from './Timer.module.css';
+import styles from './Timer.module.scss';
 import PlayButton from './buttons/PlayButton'
 import PauseButton from './buttons/PauseButton'
 import StopButton from './buttons/StopButton'
