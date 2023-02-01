@@ -25,7 +25,7 @@
     <img src="https://www.kindpng.com/picc/m/160-1608792_circle-document-icon-png-transparent-png.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">Urban Area City Info</h3>
+<h3 align="center">Meditation App</h3>
 
   <p align="center">
     This is a meditation app. Set up the timer, the experience, and you're set to go!
