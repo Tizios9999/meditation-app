@@ -1,4 +1,4 @@
-import styles from './ErrBox.module.css'
+import styles from './ErrBox.module.scss'
 import { useContext } from 'react'
 import { AppContext } from '../../contexts/AppContext'
 
