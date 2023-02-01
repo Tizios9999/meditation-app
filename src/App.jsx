@@ -1,3 +1,4 @@
+import './index.scss'
 import { useRef, useContext, useEffect } from 'react'
 import Menu from './components/Menu/Menu'
 import MeditationSection from './components/MeditationSection/MeditationSection'
