@@ -1,10 +1,13 @@
 import styles from './Card.module.scss'
 import { useContext } from 'react'
 import { AppContext } from '../../contexts/AppContext'
+import classNames from 'classnames'
 
 function Card(props) {
 
     const [state, dispatch] = useContext(AppContext);
+
+    const cardClasses = classNames(styles["card"], {[styles["highlighted"]]: props.id == state.selectedCard})
 
     function handleClick() {
 
@@ -26,7 +29,7 @@ function Card(props) {
 
 
     return (
-        <div className={`${styles["card"]} ${props.id == state.selectedCard ? styles["highlighted"] : ""}`} onClick={handleClick}>
+        <div className={cardClasses} onClick={handleClick}>
          <div className={styles["top--card"]} style={{backgroundImage: "url(" + props.image + ")"}}></div>
          <div style={props.style} className={`${styles["title--card"]}`}>{props.title}</div>
         </div>
